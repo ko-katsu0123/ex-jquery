@@ -1,11 +1,11 @@
 $(function(){
     // 住所取得ボタンクリックで非同期処理開始
-    $("get_address_btn").on("click", function(){
+    $("#get_address_btn").on("click", function(){
         $.ajax({
             url:"http://zipcoda.net/api",
             dataType:"jsonp",
             data:{
-                zipcode:$("zipcode").val()
+                zipcode:$("#zipcode").val()
             },
             async: true
         }).done(function(data){
